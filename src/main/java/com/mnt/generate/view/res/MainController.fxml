@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@common.css" type="VBox" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="1024.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="203.0" spacing="10.0">
+               <children>
+                  <Label styleClass="font-16" text="代码生成工具" />
+                  <Label styleClass="font-10" text="author: cico" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <TabPane prefHeight="200.0" prefWidth="200.0" styleClass="font-12" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab fx:id="tabGenerateCode" text="代码生成" />
+          <Tab fx:id="tabDBConfig" text="数据库配置" />
+            <Tab fx:id="tabCodeSaveConfig" text="代码生成配置" />
+        </tabs>
+      </TabPane>
+   </children>
+</fx:root>

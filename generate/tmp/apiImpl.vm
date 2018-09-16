@@ -1,0 +1,86 @@
+package $package;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import com.alibaba.dubbo.config.annotation.Service;
+import java.util.List;
+
+import $entityPackagePath;
+import $apiPackagePath;
+import $servicePackagePath;
+import $queryPackage;
+import com.jiangroom.common.generic.GenericInterfaceImpl;
+import com.jiangroom.common.generic.GenericService;
+
+
+/**
+ * 
+ * $remark api实现
+ * @author $user
+ * @Date $date
+ */
+@Service
+public class $className extends GenericInterfaceImpl<$entityName, Long> implements $apiClassName {
+
+	@Autowired
+	private $serviceClassName $serviceJavaName;
+	
+	
+	@Override
+	public GenericService<$entityName, Long> getManager() {
+		return $serviceJavaName;
+	}
+
+	/**
+	 * 根据条件查询列表
+	 */
+	@Override
+	public List<$entityName> listBy($queryEntity query) {
+	
+		return ${serviceJavaName}.listBy(query);
+	}
+	
+	
+	/**
+	 * 根据条件查询数量
+	 */
+	@Override 
+	public int countBy($queryEntity query) {
+	
+		return ${serviceJavaName}.countBy(query);
+	}
+	
+	/**
+	 * 根据条件查询实体
+	 */
+	@Override
+	public $entityName getBy($queryEntity query) {
+	
+		return ${serviceJavaName}.getBy(query);
+	}
+	
+	/**
+	 * 根据条件查询实体
+	 */
+	@Override
+	public boolean exist($entityName dto) {
+	
+		return ${serviceJavaName}.exist(dto);
+	}
+
+
+    /* append__start */
+  
+$holdCode 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+    /* append__end */
+
+}	
